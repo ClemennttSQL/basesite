@@ -95,7 +95,7 @@ h3 { font-size: 2rem; }
     color: #fff;
     position: relative;
     z-index: 1; /* Pour assurer le contenu au-dessus de l'image */
-}
+} 
 
 /* Ajout d'un overlay léger pour la lisibilité sans le 'cadran' */
 .hero::after {
@@ -143,8 +143,16 @@ h3 { font-size: 2rem; }
     padding: 30px;
     background: #fff;
     border-radius: 10px;
+    border: 1px solid var(--light-color);   
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.service-item:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
 }
 
 .service-item i {
