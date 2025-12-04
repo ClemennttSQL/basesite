@@ -1,0 +1,164 @@
+/* =======================================
+   css/contact.css
+   Styles spécifiques de la page de contact (Formulaire Dark Mode)
+   ======================================= */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #343a40;
+    --dark-color: #212529;
+}
+
+/* --- Conteneur global et Box --- */
+#contact {
+    background-color: var(--dark-color); 
+    min-height: 85vh; 
+    display: flex;
+    align-items: center;
+}
+
+.container-contact {
+    max-width: 800px; 
+    margin: auto;
+    width: 90%;
+}
+
+.contact-box {
+    background-color: #1a1a1a; 
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    border: 1px solid #333; 
+    text-align: left;
+}
+
+/* --- En-tête du Formulaire --- */
+.contact-header {
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.contact-header i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-header h2 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.contact-header p {
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* --- Formulaire et Groupes --- */
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1; 
+    margin-bottom: 10px;
+}
+
+.form-group.full-width {
+    width: 100%;
+    flex: none;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style pour la mention Obligatoire (petite et discrète) */
+.required-note {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #999; 
+    margin-left: 5px;
+}
+
+/* --- Champs de Saisie (Input/Textarea) --- */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    border: 1px solid #444;
+    color: #fff; 
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #777; 
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+/* --- Textarea --- */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- Bouton d'Envoi (CTA - Clair/Gris) --- */
+.btn-submit {
+    background: #e9ecef;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+    background: #d4d8db;
+    color: var(--dark-color);
+}
+
+.btn-submit i {
+    margin-left: 10px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0; 
+    }
+    .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact-box {
+        padding: 20px;
+    }
+}

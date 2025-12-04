@@ -1,0 +1,117 @@
+/* CONTENEUR DU CARROUSEL */
+.partners-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* SLIDER */
+.partners-slider {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: slide 18s linear infinite;
+}
+
+/* CARTES */
+.partner-card {
+    min-width: 260px;
+}
+
+/* Animation défilement */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Stop scroll au survol */
+.partners-slider-container:hover .partners-slider {
+    animation-play-state: paused;
+}
+
+/* TITRES */
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* GRILLE RAFFINÉE */
+.team-refined-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+/* CARTE ÉQUIPE RAFFINÉE */
+.team-refined-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet léger au hover */
+.team-refined-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
+
+/* PHOTO CERCLE RAFFINÉE */
+.team-photo-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #007bff;
+    padding: 4px;
+    transition: 0.4s ease;
+}
+
+.team-refined-card:hover .team-photo-wrapper {
+    transform: scale(1.07);
+    border-color: #005fcc;
+}
+
+.team-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXTES */
+.team-name {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.team-role {
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-desc {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 5px;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeCoinDuPC - Expertise Informatique</title>
+    <meta name="description" content="L'expertise informatique à votre service. Montage PC sur-mesure, dépannage, et solutions d'entreprise.">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">LeCoinDuPC</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="equipes.html" class="active">Equipe</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="cta-nav">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="container hero-content-center">
+                <h2>L'expertise informatique à votre service.</h2>
+                <p>Conseils personnalisés, montage PC sur-mesure et assistance rapide.</p>
+                <a href="contact.html" class="btn btn-primary">Demander un Devis Gratuit</a>
+            </div>
+        </section>
+
+        <section class="bg-light section-padding">
+            <div class="container">
+                <h3>Nos Solutions Clés</h3>
+                <p class="lead">Des services précis et professionnels, conçus pour la performance et votre tranquillité d'esprit.</p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-desktop"></i>
+                        <h4>Montage PC Sur-Mesure & Optimisation</h4>
+                        <p>Nous assemblons votre machine de rêve avec des composants haut de gamme et un câble management irréprochable. Profitez d'un PC <strong>sur-mesure</strong>, <strong>optimisé</strong> pour des performances maximales, que ce soit pour le gaming ou la bureautique. L'attention est portée sur le budget et les besoins de chacun, afin de rendre 
+                        le rendu final adapté à vous et à votre personalité!
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>Dépannage Express & En-Ligne</h4>
+                        <p>Diagnostic précis et réparation rapide de vos pannes matérielles et logicielles. Nous intervenons à distance pour les problèmes simples (virus, pilotes, configuration) mais également pour des problèmes
+                            de configuration, de montage ou d'installation, totalement en ligne.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Communauté passionnée</h4>
+                        <p>Rejoignez notre discord afin de bénéficier de notre communauté de passionés d'informatique
+                            désireux d'approfondir leurs connaissances en matière d'hardware, d'échanger des astuces et des
+                            configurations et de dénicher des affaires selon les tendances actuelles ! 
+                        </p>
+                    </div>
+                </div>
+                <a href="services.html" class="btn btn-primary" style="margin-top: 2rem;">Voir tous nos services</a>
+            </div>
+        </section>
+        
+        <section id="engagements" class="section-padding bg-white">
+            <div class="container">
+                <h3>Nos Engagements</h3>
+                <p class="lead">LeCoinDuPC est né de la passion. Découvrez notre histoire, nos valeurs et ce qui fait notre expertise.</p>
+                
+                <div class="intro-grid">
+                    <div class="intro-point point-1 left">
+                        <h4>Expertise Certifiée</h4>
+                        <p>Un professionnel qualifié et à jour sur les dernières technologies pour garantir la performance.</p>
+                    </div>
+
+                    <div class="intro-point point-2 left">
+                        <h4>Transparence Totale</h4>
+                        <p>Pas de jargon technique obscur. Nous vous expliquons chaque étape et chaque choix de composant avec 
+                            un language simple comprennable par tous et toutes.</p>
+                    </div>
+                    
+                    <div class="center-image">
+                        <img src="../img/5060 ti.webp" alt="Composants PC (Carte graphique et SSD)">
+                    </div>
+
+                    <div class="intro-point point-3 right">
+                        <h4>Montage Sur-Mesure</h4>
+                        <p>Votre PC est unique. Conception et assemblage optimisés pour vos besoins et vos envies et surtout... 
+                            Vous ressemble ! 
+                        </p>
+                    </div>
+
+                    <div class="intro-point point-4 right">
+                        <h4>Assistance & Réactivité</h4>
+                        <p>Support rapide et efficace pour tous vos besoins d'assistance et de dépannage informatique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner section-padding">
+            <div class="container">
+                <h2>Prêt à optimiser votre expérience informatique ?</h2>
+                <a href="contact.html" class="btn btn-primary">Contactez-nous</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LeCoinDuPC. Tous droits réservés.</p>
+            <nav class="footer-nav">
+                <a href="../templates/mentionslegales.html">Mentions Légales</a> |
+                <a href="#">Politique de Confidentialité</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.getElementById('main-nav');
+            const icon = menuToggle.querySelector('i');
+
+            // Script pour le menu mobile
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    nav.classList.toggle('open');
+                    if (nav.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (nav.classList.contains('open')) {
+                            nav.classList.remove('open');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Script de disparition de la barre de navigation
+            let prevScrollpos = window.pageYOffset;
+            const header = document.querySelector('header');
+            header.style.transition = 'top 0.3s ease-in-out';
+
+            window.onscroll = function() {
+                let currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos || currentScrollPos < 50) {
+                    header.style.top = "0";
+                } else {
+                    header.style.top = `-${header.offsetHeight}px`;
+                }
+                prevScrollpos = currentScrollPos;
+            }
+        });
+    </script>
+</body>
+</html>

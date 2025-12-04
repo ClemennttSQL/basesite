@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeCoinDuPC - Votre Expert en Informatique</title>
+    <meta name="description" content="Conseils, Montage PC Sur-Mesure, Assistance informatique pour Particuliers et Entreprises.">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">LeCoinDuPC</h1>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="../templates/index.html" class="active">Accueil</a></li> 
+                    <li><a href="../templates/apropos.html">À Propos</a></li>
+                    <li><a href="../templates/equipes.html">Equipe</a></li>
+                    <li><a href="../templates/services.html">Services</a></li>
+                    <li><a href="../templates/contact.html" class="cta-nav">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="container">
+                <h2>L'expertise informatique à votre service.</h2>
+                <p>Conseils personnalisés, montage PC sur-mesure et assistance rapide.</p>
+                <a href="contact.html" class="btn btn-primary">Demander un Devis Gratuit</a>
+            </div>
+        </section>
+
+        <section id="a-propos" class="section-padding">
+            <div class="container">
+                <h3>Nos Engagements</h3>
+                <p class="lead">LeCoinDuPC est né de la passion. Découvrez notre histoire, nos valeurs et ce qui fait notre expertise.</p>
+
+                <div class="intro-grid">
+                    
+                    <div class="intro-point point-1 left">
+                        <h4>Expertise Certifiée</h4>
+                        <p>Des professionnels qualifiés et à jour sur les dernières technologies pour garantir la performance.</p>
+                    </div>
+
+                    <div class="intro-point point-2 left">
+                        <h4>Transparence Totale</h4>
+                        <p>Pas de jargon technique obscur. Nous vous expliquons chaque étape et chaque choix de composant.</p>
+                    </div>
+                    
+                    <div class="center-image">
+                        <img src="../img/5060 ti.webp" alt="Composants PC (Carte graphique et SSD)">
+                    </div>
+
+                    <div class="intro-point point-3 right">
+                        <h4>Montage Sur-Mesure</h4>
+                        <p>Votre PC est unique. Conception et assemblage optimisés pour le jeu, le travail ou la création.</p>
+                    </div>
+
+                    <div class="intro-point point-4 right">
+                        <h4>Assistance & Réactivité</h4>
+                        <p>Support rapide et efficace pour tous vos besoins d'assistance et de dépannage informatique.</p>
+                    </div>
+
+                </div> </div>
+        </section>
+
+        <section class="bg-light section-padding">
+            <div class="container">
+                <h3>Nos Solutions Clés</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-desktop"></i>
+                        <h4>Montage PC</h4>
+                        <p>Le PC parfait, assemblé selon vos spécifications et votre budget.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>Assistance</h4>
+                        <p>Dépannage, conseils d'achat et optimisation de votre système.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Entreprises</h4>
+                        <p>Gestion de parcs informatiques et support technique TPE/PME.</p>
+                    </div>
+                </div>
+                <a href="services.html" class="btn btn-primary" style="margin-top: 2rem;">Voir tous nos services</a>
+            </div>
+        </section>
+
+        <section class="cta-banner section-padding">
+            <div class="container">
+                <h2>Prêt à optimiser votre expérience informatique ?</h2>
+                <a href="contact.html" class="btn btn-primary">Contactez-nous</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LeCoinDuPC. Tous droits réservés.</p>
+            <nav class="footer-nav">
+                <a href="#">Mentions Légales</a> |
+                <a href="#">Politique de Confidentialité</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.getElementById('main-nav');
+            const icon = menuToggle.querySelector('i');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    nav.classList.toggle('open');
+                    if (nav.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times'); // Icône de fermeture (X)
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars'); // Icône de menu (Burger)
+                    }
+                });
+                // Fermeture du menu après le clic sur un lien mobile
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (nav.classList.contains('open')) {
+                            nav.classList.remove('open');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

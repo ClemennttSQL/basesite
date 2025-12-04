@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Mentions légales</title>
+     <link href="../css/mentions.css" rel="stylesheet">
+     <link href="../css/navbar.css" rel="stylesheet">
+     <link rel="stylesheet" href="../css/index.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+     <header>
+          <div class="container">
+               <h1 class="logo">LeCoinDuPC</h1>
+               <nav id="main-nav">
+                    <ul>
+                         <li><a href="index.html" class="active">Accueil</a></li>
+                         <li><a href="apropos.html">À Propos</a></li>
+                         <li><a href="equipes.html" class="active">Equipe</a></li>
+                         <li><a href="services.html">Services</a></li>
+                         <li><a href="contact.html" class="cta-nav">Contact</a></li>
+                    </ul>
+               </nav>
+               <button class="menu-toggle" aria-label="Ouvrir le menu">
+                    <i class="fas fa-bars"></i>
+               </button>
+          </div>
+     </header>
+
+     <h1 class="center">Mentions Légales</h1>
+     <section class="center">
+          <h2>Éditeur du site</h2>
+          <p>
+               Nom de l'entreprise : <br>
+               Date de création: 
+               Numéro RNA : <br>
+               Numéro Siret: <br>
+               Adresse : <br>
+               Téléphone : <br>
+               Email : <br>
+     
+               Ce site web a été réalisé par Ichinose et Gaël, membres de l'association EPI STUDIO : <a href="https://www.epistudios.fr">https://www.epistudios.fr</a>
+          </p>
+     </section>
+     
+     <section class="center">
+          <h2>Hébergement</h2>
+          <p>
+               Hébergeur : Hyperion Cloud<br>
+               Adresse : 2 AVENUE PASTEUR, 76000 ROUEN<br>
+               Téléphone : +33 6 67 52 61 81
+          </p>
+     </section>
+     <section class="center">
+          <h2>Propriété intellectuelle</h2>
+          <p>
+               Le contenu de ce site web ainsi que le site web en question est la propriété de LeCoinDuPC. 
+          </p>
+     </section>
+     <section class="center">
+          <h2>Protection des données personnelles</h2>
+          <p>
+               Ce site web ne collecte aucune de vos données personnelles, nous sommes engagés dans le combat
+               contre l'utilisation commerciale des données personnelles ! <br>
+               Néanmoins, si vous êtes client, certaines données que vous nous avez communiquées
+               (nom, prénom, adresse, signature, IBAN) seront stockées
+               pour la durée de votre commande et de la maintenance. <br>
+               Elles seront supprimées au bout de 30 jours dès lors que la commande et la période de maintenance est
+               terminée. <br>
+               Si vous souhaitez faire opposition sur ces données durant la période de la commande,
+               [à remplir] . <!-- ! à remplir-->
+          </p>
+     </section>
+     
+</body>
+<script>
+     document.addEventListener('DOMContentLoaded', function () {
+          const menuToggle = document.querySelector('.menu-toggle');
+          const nav = document.getElementById('main-nav');
+          const icon = menuToggle.querySelector('i');
+
+          // Script pour le menu mobile
+          if (menuToggle) {
+               menuToggle.addEventListener('click', function () {
+                    nav.classList.toggle('open');
+                    if (nav.classList.contains('open')) {
+                         icon.classList.remove('fa-bars');
+                         icon.classList.add('fa-times');
+                    } else {
+                         icon.classList.remove('fa-times');
+                         icon.classList.add('fa-bars');
+                    }
+               });
+               nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                         if (nav.classList.contains('open')) {
+                              nav.classList.remove('open');
+                              icon.classList.remove('fa-times');
+                              icon.classList.add('fa-bars');
+                         }
+                    });
+               });
+          }
+
+          // Script de disparition de la barre de navigation
+          let prevScrollpos = window.pageYOffset;
+          const header = document.querySelector('header');
+          header.style.transition = 'top 0.3s ease-in-out';
+
+          window.onscroll = function () {
+               let currentScrollPos = window.pageYOffset;
+               if (prevScrollpos > currentScrollPos || currentScrollPos < 50) {
+                    header.style.top = "0";
+               } else {
+                    header.style.top = `-${header.offsetHeight}px`;
+               }
+               prevScrollpos = currentScrollPos;
+          }
+     });
+</script>
+</html>
